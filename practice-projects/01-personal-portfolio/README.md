@@ -21,3 +21,6 @@ For guidance this project follows these instructions:
 - In the `<main>` section, use Flexbox to create a row or column layout for the "About Me" and "Contact" sections. For "Contact," display a form (with an Email and Message) in a vertical flex container.
 - Use Flexbox properties like justify-content and align-items to center or space out content.
 - Style the `<footer>` as a flex container to evenly space the contact details.
+
+## Final Result
+![Personal Project Final Result](assets/01-personal-portfolio_final-result.png)
