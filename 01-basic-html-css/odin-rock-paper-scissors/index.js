@@ -1,16 +1,18 @@
 
+const gameChoices = ["paper", "rock", "scissors"];
+
 function getComputerChoice () {
     let computerChoice = "";
     const randomValue = Math.floor(Math.random() * 3);
     switch (randomValue) {
         case 0:
-            computerChoice = "rock";
+            computerChoice = gameChoices[1];
             break;
         case 1:
-            computerChoice = "paper";
+            computerChoice = gameChoices[0];
             break;
         case 2:
-            computerChoice = "scissors";
+            computerChoice = gameChoices[2];
             break;
         default:
             console.warn("Invalid computer choice!");
@@ -32,17 +34,17 @@ function playRound(humanChoice, computerChoice, humanScore, computerScore) {
     }
     else 
     {
-        if (humanChoice === "paper") 
+        if (humanChoice === gameChoices[0]) 
         {
-            computerChoice === "rock" ? humanScore++ : computerScore++;
+            computerChoice === gameChoices[1] ? humanScore++ : computerScore++;
         }
-        if (humanChoice === "rock") 
+        if (humanChoice === gameChoices[1]) 
         {
-            computerChoice === "scissors" ? humanScore++ :  computerScore++;
+            computerChoice === gameChoices[2] ? humanScore++ :  computerScore++;
         }
-        if (humanChoice === "scissors") 
+        if (humanChoice === gameChoices[2]) 
         {
-            computerChoice === "paper" ? humanScore++ : computerScore++;    
+            computerChoice === gameChoices[0] ? humanScore++ : computerScore++;    
         }
         humanScore > computerScore ? alert(`You won!`) : alert(`You lose!`);
 
@@ -58,26 +60,26 @@ function playGame(){
     let roundsToPlay = prompt("How many rounds do you want to play?");
     for (let index = 0; index < roundsToPlay; index++)
     {
-        const userSelection = getComputerChoice();
-        const computerSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+        const userSelection = getHumanChoice();
 
         const roundResult = playRound(userSelection, computerSelection, humanScore, computerScore);
         humanScore = roundResult.humanScore;
-        computerScore = roundResult.computerScore;
-1       
+        computerScore = roundResult.computerScore;    
     }
+
     console.group("Scores");
     console.log(`User: ${humanScore}`);
     console.log(`Computer: ${computerScore}`);
     
     if (humanScore > computerScore) {
-        alert(`You won! Final score: User: ${humanScore}pts. Computer: ${computerScore}pts.`);
+        alert(`You won! \nFinal score: User: ${humanScore}pts. Computer: ${computerScore}pts.`);
     }
-    if (humanScore < computerScore) {
-        alert(`You lose! Final score: User: ${humanScore}pts. Computer: ${computerScore}pts.`);
+    else if (humanScore < computerScore) {
+        alert(`You lose! \nFinal score: User: ${humanScore}pts. Computer: ${computerScore}pts.`);
     }
-    if (humanScore === computerScore) {
-        alert(`Draw! Try again later. Final score: ${humanScore}pts.`);
+    else {
+        alert(`Draw! Try again later. \nFinal score: ${humanScore}pts.`);
     }
 }
 
