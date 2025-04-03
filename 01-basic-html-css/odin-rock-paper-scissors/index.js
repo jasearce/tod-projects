@@ -1,9 +1,7 @@
-console.log("Hello World!");
 
 function getComputerChoice () {
     let computerChoice = "";
     const randomValue = Math.floor(Math.random() * 3);
-    console.log({randomValue});
     switch (randomValue) {
         case 0:
             computerChoice = "rock";
@@ -18,50 +16,37 @@ function getComputerChoice () {
             console.warn("Invalid computer choice!");
             break;
     }
-    console.log({computerChoice});
     return computerChoice;
 }
 
 function getHumanChoice() {
     let userChoice = prompt("Choose your option (rock, paper, scissors): ");
-    console.log({userChoice});
     return userChoice.trim().toLowerCase();
 }
 
 function playRound(humanChoice, computerChoice, humanScore, computerScore) {
-    const condition1 = "Paper beats Rock";
-    const condition2 = "Rock beats Scissors";
-    const condition3 = "Scissors beats Paper";
-    
-    if (humanChoice == computerChoice) {
-        console.log("Draw! Try again.");
+
+    if (humanChoice === computerChoice) 
+    {
+        alert(`Draw! Try again!`);
     }
-    if (humanChoice === "paper" && computerChoice === "rock") {
-        console.log(`You won! ${condition1}`);
-        humanScore++;
+    else 
+    {
+        if (humanChoice === "paper") 
+        {
+            computerChoice === "rock" ? humanScore++ : computerScore++;
+        }
+        if (humanChoice === "rock") 
+        {
+            computerChoice === "scissors" ? humanScore++ :  computerScore++;
+        }
+        if (humanChoice === "scissors") 
+        {
+            computerChoice === "paper" ? humanScore++ : computerScore++;    
+        }
+        humanScore > computerScore ? alert(`You won!`) : alert(`You lose!`);
+
     }
-    if (humanChoice === "paper" && computerChoice === "scissors") {
-        console.log(`You lose! ${condition3}`);
-        computerScore++;
-    }
-    if (humanChoice === "rock" && computerChoice === "paper") {
-        console.log(`You lose! ${condition1}`);
-        computerScore++;
-    }
-    if (humanChoice === "rock" && computerChoice === "scissors") {
-        console.log(`You won! ${condition2}`);
-        humanScore++;
-    }
-    if (humanChoice === "scissors" && computerChoice === "paper") {
-        console.log(`You won! ${condition3}`);
-        humanScore++;
-    }
-    if (humanChoice === "scissors" && computerChoice === "rock") {
-        console.log(`You lose! ${condition2}`);
-        computerScore++;
-    }
-    console.log(`Round score User: ${humanScore}pt. Computer: ${computerScore}pt.`);
-    
     return {humanScore, computerScore};
     
 }
@@ -86,13 +71,13 @@ function playGame(){
     console.log(`Computer: ${computerScore}`);
     
     if (humanScore > computerScore) {
-        alert(`You won! You got ${humanScore}pts. Computer: ${computerScore}`);
+        alert(`You won! Final score: User: ${humanScore}pts. Computer: ${computerScore}pts.`);
     }
     if (humanScore < computerScore) {
-        alert(`You lose! You got ${humanScore}pts. Computer: ${computerScore}`);
+        alert(`You lose! Final score: User: ${humanScore}pts. Computer: ${computerScore}pts.`);
     }
     if (humanScore === computerScore) {
-        alert(`Draw! Try again later. Score: ${humanScore}`);
+        alert(`Draw! Try again later. Final score: ${humanScore}pts.`);
     }
 }
 
