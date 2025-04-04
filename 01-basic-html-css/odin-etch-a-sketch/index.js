@@ -21,13 +21,25 @@ function createGrid(containerEl, rows, columns){
     }
 }
 
+function getElementOpacity(element){
+    const currentBgColor = window.getComputedStyle(element).backgroundColor;
+    console.log({currentBgColor});
+    const cleanedStr = currentBgColor.replace("rgba(","").replace("rgb(","").replace(")","");
+    const parts = cleanedStr.split(",");
+    const opacity = parts.length === 4 ? parseFloat(parts[3]) : 0.0;
+    return opacity;
+}
+
 function applyMouseoverEffect() {
     // Creating the persistent trail when hovering
     const divBlocks = document.querySelectorAll(".square");
     divBlocks.forEach((block) => {
         block.addEventListener("mouseover", ()=>{
             if (toogleBtn.checked) {
-                block.style.backgroundColor = "#1c1c1c";
+                const currentOpacity = getElementOpacity(block);
+                const newOpacity = currentOpacity < 1 ? Math.min(currentOpacity + 0.1, 1.0): 1.0;
+                console.log({newOpacity});
+                block.style.backgroundColor = `rgba(28,28,28,${newOpacity})`;
             } else {
                 block.style.backgroundColor = randomColor();
             }
