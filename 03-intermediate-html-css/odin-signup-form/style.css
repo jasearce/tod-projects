@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --primary-color: #596D48;
+    --border-color: #E5E7EB;
+}
+
+@font-face {
+    font-family: 'Norse Bold';
+    font-weight: 700;
+    font-style: normal;
+    src: url(./assets/fonts/Norse-Bold.otf) format('opentype');
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+}
+
+.sign-up-form {
+    min-height: 100vh;
+    display: flex;
+}
+
+.sign-up-form__left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    background-image: url(./assets/background.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.sign-up-form__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: .625rem 1.25rem;
+    position: absolute;
+    top: 32%;
+    transform: translateY(-50%);
+}
+
+.sign-up-form__logo-img {
+    width: 15%;
+}
+
+.sign-up-form__logo-name {
+    font-family: 'Norse Bold';
+    font-size: 4.5rem;
+    color: #fff;
+    align-self: flex-end;
+}
+
+.sign-up-form__retribution {
+    position: absolute;
+    bottom: 1rem;
+    color: #fff;
+    font-size: 0.75rem;
+}
+
+.sign-up-form__retribution a {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.sign-up-form__right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(251, 247, 247);
+}
+
+.sign-up-form__welcome {
+    width: 75%;
+    font-weight: 700;
+    padding-left: 2.5rem;
+}
+
+.sign-up-form__welcome p:not(p:first-child){
+    margin-bottom: 1rem;
+}
+
+.sign-up-form__content {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-up-form__inputs,
+.sign-up-form__actions {
+    padding-left: 2.5rem;
+}
+
+.sign-up-form__inputs {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #fff;
+    margin-bottom: 2rem;
+    box-shadow: 0px 5px 10px -5px rgba(130, 130, 130, 0.75);
+}
+
+.sign-up-form__row {
+    display: flex;
+    margin-bottom: 1.125rem;
+}
+
+.sign-up-form__column {
+    display: flex;
+    flex-direction: column;
+    width: 28%;
+}
+
+.sign-up-form__column:first-child {
+    margin-right: 3.5rem;
+}
+
+.sign-up-form__column label {
+    text-transform: uppercase;
+    font-size: .625rem;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+}
+
+.sign-up-form__column input {
+    border: 1px solid var(--border-color);
+    padding: .25rem .25rem;
+    border-radius: .125rem;
+}
+
+.sign-up-form__content h3 {
+    margin-bottom: 1rem;
+}
+
+.sign-up-form__actions button {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1rem 3rem;
+    border-radius: .5rem;
+    border: none;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    box-shadow: 0px 5px 10px -5px rgba(130, 130, 130, 0.75);
+}
+
+.sign-up-form__actions p {
+    font-size: .875rem;
+    font-weight: 500;
+}
+
+.sign-up-form__actions a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.sign-up-form__column input[type='password']:invalid {
+    border: 1px solid red;
+}
+
+.sign-up-form__column input:focus {
+    border: 1px solid #0066cc;
+    box-shadow: 0px 5px 10px -5px rgba(130, 130, 130, 0.75);
+}
