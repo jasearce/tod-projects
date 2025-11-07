@@ -1,212 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard | TOP</title>
+    <title>TOD Project | Admin Dashboard</title>
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
+
 <body>
-    <div class="wrapper">
-        <nav>
-            <a href="#" class="nav-link">
-                <img src="./assets/dashboard.svg" alt="" >
-                <span class="title">Dashboard</span>
-            </a>
-            <ul class="nav-list">
-                <li class="nav-item">
-                    <a href="" class="nav-link">
-                        <img src="./assets/home.svg" alt="">
-                        <span class="nav-text">Home</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link">
-                        <img src="./assets/profile.svg" alt="">
-                        <span class="nav-text">Profile</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link">
-                        <img src="./assets/messages.svg" alt="">
-                        <span class="nav-text">Messages</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link">
-                        <img src="./assets/history.svg" alt="">
-                        <span class="nav-text">History</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link">
-                        <img src="./assets/tasks.svg" alt="">
-                        <span class="nav-text">Tasks</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link">
-                        <img src="./assets/communities.svg" alt="">
-                        <span class="nav-text">Communities</span>
-                    </a>
-                </li>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <img class="custom-icon xlarge" src="./assets/dashboard.svg" alt="TOD Dashboard logo">
+                <span>Dashboard</span>
+            </div>
+            <ul class="nav-main">
+                <li><a href="#"><img class="custom-icon" src="./assets/home.svg" alt="">Home</a></li>
+                <li><a href="#"><img class="custom-icon" src="./assets/profile.svg" alt="">Profile</a></li>
+                <li><a href="#"><img class="custom-icon" src="./assets/messages.svg" alt="">Messages</a></li>
+                <li><a href="#"><img class="custom-icon" src="./assets/history.svg" alt="">History</a></li>
+                <li><a href="#"><img class="custom-icon" src="./assets/tasks.svg" alt="">Tasks</a></li>
+                <li><a href="#"><img class="custom-icon" src="./assets/communities.svg" alt="">Communities</a></li>
             </ul>
-            <ul class="nav-list">
-                <li class="nav-item">
-                    <a href="" class="nav-link">
-                        <img src="./assets/settings.svg" alt="">
-                        <span class="nav-text">Settings</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link">
-                        <img src="./assets/support.svg" alt="">
-                        <span class="nav-text">Support</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link">
-                        <img src="./assets/privacy.svg" alt="">
-                        <span class="nav-text">Privacy</span>
-                    </a>
-                </li>
+            <ul class="nav-settings">
+                <li><a href="#"><img class="custom-icon" src="./assets/settings.svg" alt="">Settings</a></li>
+                <li><a href="#"><img class="custom-icon" src="./assets/support.svg" alt="">Support</a></li>
+                <li><a href="#"><img class="custom-icon" src="./assets/privacy.svg" alt="">Privacy</a></li>
             </ul>
-        </nav>
-        <header>
-            <div class="header__container">
-                <div class="header-top">
-                    <div class="header-top__search-bar">
-                        <label for="search-bar">
-                            <img src="./assets/search.svg" alt="">
-                        </label>
-                        <input type="search" name="search-bar" id="search-bar">
-                    </div>
-                    <img src="./assets/notifications.svg" alt="">
-                    <div class="header-top__profile">
-                        <img src="" alt="">
-                        <span class="profile-name">Morgan Oakley</span>
+        </div>
+        <div class="header">
+            <div class="header-top">
+                <div class="search-bar">
+                    <img class="header-icon" src="./assets/search.svg" alt="search icon">
+                    <input type="text" name="search-bar" id="search-bar">
+                </div>
+                <div class="user-info">
+                    <img class="header-icon" src="./assets/notifications.svg" alt="notification icon">
+                    <img class="header-icon large" src="./assets/lion.png" alt="lion profile pic">
+                    <span>Morgan Oakley</span>
+                </div>
+            </div>
+            <div class="header-bottom">
+                <div class="greeting">
+                    <img src="./assets/lion.png" alt="lion profile pic">
+                    <div class="profile-info">
+                        <span>Hi there,</span>
+                        <h2>Morgan Oakley (@morgan)</h2>
                     </div>
                 </div>
-                <div class="header-bottom">
-                    <div class="header-bottom__profile-container">
-                        <img src="" alt="">
-                        <div class="profile-container">
-                            <span class="greeting">Hi there,</span>
-                            <p class="profile-name">
-                                Morgan Oakley <span class="username">(@morgan)</span>
-                            </p>
+                <div class="action-buttons">
+                    <button class="btn">New</button>
+                    <button class="btn">Upload</button>
+                    <button class="btn">Share</button>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="main-content-left">
+                <h3>Your Projects</h3>
+                <div class="projects-container">
+                    <div class="project">
+                        <h3>Super Cool Project</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur magni repellendus vel, veniam ratione, beatae doloribus ipsa recusandae natus quos culpa possimus voluptates dolor quod?</p>
+                        <div class="sharing-options"><img src="./assets/add-favorite.svg" alt="add to favorites"><img src="./assets/visibility.svg" alt="set visibility icon"><img src="./assets/share.svg" alt="share icon"></div>
+                    </div>
+                    <div class="project">
+                        <h3>Less Cool Project</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ad voluptatibus eius exercitationem expedita molestiae culpa sapiente hic unde dolorem, iste facere?</p>
+                        <div class="sharing-options"><img src="./assets/add-favorite.svg" alt="add to favorites"><img src="./assets/visibility.svg" alt="set visibility icon"><img src="./assets/share.svg" alt="share icon"></div>
+                    </div>
+                    <div class="project">
+                        <h3>Impossible App</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae in odit voluptate. Quibusdam modi expedita ut aliquam nisi.</p>
+                        <div class="sharing-options"><img src="./assets/add-favorite.svg" alt="add to favorites"><img src="./assets/visibility.svg" alt="set visibility icon"><img src="./assets/share.svg" alt="share icon"></div>
+                    </div>
+                    <div class="project">
+                        <h3>Easy Peasy App</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit odit adipisci dicta consectetur minus blanditiis, doloremque ad porro quos eligendi itaque qui, iure asperiores assumenda provident?</p>
+                        <div class="sharing-options"><img src="./assets/add-favorite.svg" alt="add to favorites"><img src="./assets/visibility.svg" alt="set visibility icon"><img src="./assets/share.svg" alt="share icon"></div>
+                    </div>
+                    <div class="project">
+                        <h3>Ad Blocker</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, aperiam facilis esse atque praesentium vero voluptatibus suscipit recusandae a eaque sapiente temporibus laudantium ab accusamus ipsam obcaecati molestias distinctio, iusto neque natus.</p>
+                        <div class="sharing-options"><img src="./assets/add-favorite.svg" alt="add to favorites"><img src="./assets/visibility.svg" alt="set visibility icon"><img src="./assets/share.svg" alt="share icon"></div>
+                    </div>
+                    <div class="project">
+                        <h3>Money Maker</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dignissimos facilis recusandae laudantium quasi voluptas voluptatibus quae rem dolores voluptate? Ex, vel consectetur. Beatae error quidem vero illum.</p>
+                        <div class="sharing-options"><img src="./assets/add-favorite.svg" alt="add to favorites"><img src="./assets/visibility.svg" alt="set visibility icon"><img src="./assets/share.svg" alt="share icon"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content-right">
+                <div class="announcements-container">
+                    <h3>Announcements</h3>
+                    <div class="announcements-container__content">
+                        <div class="announcement-content">
+                            <h4>Site Maintenance</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ea eum facilis aliquid sed possimus labore officia, qui reiciendis molestias.</p>
+                        </div>
+                        <div class="announcement-content">
+                            <h4>Community Share Day</h4>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus libero tenetur ad natus voluptas, corporis maxime facilis odio soluta? Doloribus dolore dolores praesentium corporis numquam?</p>
+                        </div>
+                        <div class="announcement-content no-border">
+                            <h4>Updated Privacy Policy</h4>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium qui non similique omnis, aspernatur asperiores facere reprehenderit numquam sed. Eos illo quis beatae, facere laboriosam assumenda? Itaque ea excepturi corporis?</p>
                         </div>
                     </div>
-                    <div class="header-bottom__action-buttons">
-                        <button type="button">New</button>
-                        <button type="button">Upload</button>
-                        <button type="button">Share</button>
+                </div>
+                <div class="trending-container">
+                    <h3>Trending</h3>
+                    <div class="trending-container__content">
+                        <div class="trending-content">
+                            <img src="./assets/dog.png" alt="dog profile pic">
+                            <div class="trending-info">
+                                <span>@tegan</span>
+                                <span class="trending-project">World Peace Builder</span>
+                            </div>
+                        </div>
+                        <div class="trending-content">
+                            <img src="./assets/llama.png" alt="llama profile pic">
+                            <div class="trending-info">
+                                <span>@kendall</span>
+                                <span class="trending-project">Life Changing App</span>
+                            </div>
+                        </div>
+                        <div class="trending-content">
+                            <img src="./assets/cow.png" alt="cow profile pic">
+                            <div class="trending-info">
+                                <span>@alex</span>
+                                <span class="trending-project">No Traffic Maker</span>
+                            </div>
+                        </div>
+                        <div class="trending-content">
+                            <img src="./assets/lion.png" alt="lion profile pic">
+                            <div class="trending-info">
+                                <span>@morgan</span>
+                                <span class="trending-project">Super Cool Project</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </header>
-        <main>
-            <div class="main-container">
-                <div class="projects-container">
-                    <h2>Your Projects</h2>
-                    <ul>
-                        <li class="projects-container__card">
-                            <div class="projects-container-card__content">
-                                <h3 class="title">Super Cool Project</h3>
-                                <p>
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                    Optio excepturi, ab unde explicabo ipsum ex pariatur et dignissimos cum, qui sapiente illum harum, accusantium hic.
-                                </p>
-                            </div>
-                            <div class="projects-container-card__buttons">
-                                <img src="./assets/add-favorite.svg" alt="">
-                                <img src="./assets/visibility.svg" alt="">
-                                <img src="./assets/share.svg" alt="">
-                            </div>
-                        </li>
-                        <li class="projects-container__card">
-                            <div class="projects-container-card__content">
-                                <h3 class="title">Less Cool Project</h3>
-                                <p>
-                                    Aliquam erat volutpat. Praesent mattis, mi eu tincidunt consectetur, arcu nisl rhoncus est, vel euismod nibh odio tincidunt orci. 
-                                    Nunc viverra sed orci sit amet rhoncus. Curabitur ullamcorper vestibulum tortor a lobortis. 
-                                    Quisque finibus lacus vel vehicula sollicitudin. 
-                                    Maecenas dolor dui, ornare id tellus ut, sagittis feugiat mi. 
-                                </p>
-                            </div>
-                            <div class="projects-container-card__buttons">
-                                <img src="./assets/add-favorite.svg" alt="">
-                                <img src="./assets/visibility.svg" alt="">
-                                <img src="./assets/share.svg" alt="">
-                            </div>
-                        </li>
-                        <li class="projects-container__card">
-                            <div class="projects-container-card__content">
-                                <h3 class="title">Impossible App</h3>
-                                <p>
-                                    Duis condimentum urna ac nisl hendrerit, at mattis ipsum malesuada. Nulla facilisi. 
-                                    Donec malesuada nibh porta libero aliquam eleifend. 
-                                    Sed fermentum sodales dui, sit amet sodales velit blandit nec. 
-                                    Curabitur turpis justo, venenatis eu tempus nec, porttitor vitae ipsum. 
-                                    Proin sodales ante diam, eget convallis sapien luctus quis. 
-                                </p>
-                            </div>
-                            <div class="projects-container-card__buttons">
-                                <img src="./assets/add-favorite.svg" alt="">
-                                <img src="./assets/visibility.svg" alt="">
-                                <img src="./assets/share.svg" alt="">
-                            </div>
-                        </li>
-                        <li class="projects-container__card">
-                            <div class="projects-container-card__content">
-                                <h3 class="title">Easy Peasy App</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum dui faucibus ex porttitor fermentum. 
-                                    Etiam consequat odio non sem posuere, at rhoncus ante hendrerit. 
-                                    Pellentesque hendrerit sit amet mauris eleifend sollicitudin. Nam vestibulum nulla in mi dictum mollis. 
-                                    Pellentesque consequat magna eu eleifend cursus. Donec ut risus lobortis, congue orci ut, iaculis sem. 
-                                </p>
-                            </div>
-                            <div class="projects-container-card__buttons">
-                                <img src="./assets/add-favorite.svg" alt="">
-                                <img src="./assets/visibility.svg" alt="">
-                                <img src="./assets/share.svg" alt="">
-                            </div>
-                        </li>
-                        <li class="projects-container__card">
-                            <div class="projects-container-card__content">
-                                <h3 class="title">Ad Blocker</h3>
-                                <p>
-                                    Nunc ornare mauris sit amet nisl ullamcorper, eu volutpat mauris bibendum. 
-                                    Etiam nec odio a enim ullamcorper maximus. Donec quis magna malesuada, placerat risus non, condimentum arcu. 
-                                    Quisque gravida augue non neque dignissim auctor. In.
-                                </p>
-                            </div>
-                            <div class="projects-container-card__buttons">
-                                <img src="./assets/add-favorite.svg" alt="">
-                                <img src="./assets/visibility.svg" alt="">
-                                <img src="./assets/share.svg" alt="">
-                            </div>
-                        </li>
-                        <li class="projects-container__card">
-                            <div class="projects-container-card__content">
-                                <h3 class="title">Money Maker</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget velit vitae neque finibus dictum ullamcorper sit amet eros. 
-                                    Praesent in ligula eleifend, luctus lacus at, fringilla magna. Maecenas sed faucibus arcu. Nam eu auctor arcu, vitae ornare nisl. 
-                                    Praesent sit amet ante tincidunt, rutrum turpis et, eleifend leo. Nunc maximus leo nec quam eleifend, vel sagittis odio aliquet. 
-                                    Quisque consequat elementum est, quis pretium ligula lobortis a. Pellentesque quis ullamcorper ipsum. Pellentesque vel augue.
-                                </p>
-                            </div>
-                            <div class="projects-container-card__buttons">
-                                <img src="./assets/add-favorite.svg" alt="">
-                                <img src="./assets/visibility.svg" alt="">
-                                <img src="./assets/share.svg" alt="">
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </main>
+        </div>
     </div>
 </body>
+
 </html>
