@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project | Library</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <h1>Project: Library</h1>
+            <h2>JavaScript Course</h2>
+        </header>
+        <main>
+            <div class="main-content">
+                    <h1>My Book Shelf</h1>
+                <div class="main-bottom">
+                    <div id="bookshelf"></div>
+                </div>
+            </div>
+            <aside class="form-container">
+                <form action="submit" id="new-book-form">
+                    <div class="form-row">
+                        <label for="title">Title:</label>
+                        <input type="text" name="title" id="title">
+                    </div>
+                    <div class="form-row">
+                        <label for="author">Author:</label>
+                        <input type="text" name="author" id="author">
+                    </div>
+                    <div class="form-row">
+                        <label for="pages">No. Pages:</label>
+                        <input type="text" name="pages" id="pages">
+                    </div>
+                    <div class="form-row">
+                        <label for="readStatus">Reading Status:</label>
+                        <select name="readStatus" id="readStatus">
+                            <option value="">Selecciones una opción</option>
+                            <option value=false>Pending</option>
+                            <option value=true>Read</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <button type="submit" class="add-btn">Add Book</button>
+                    </div>
+                </form>
+            </aside>
+        </main>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
